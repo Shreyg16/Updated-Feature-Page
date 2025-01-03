@@ -167,11 +167,7 @@ export default function AIFeatures() {
         {/* Pricing Section */}
         <PricingSection />
 
-        {/* FAQ Section */}
-        <div className="mb-16">
-          <FAQSection faqs={faqs} />
-        </div>
-
+        
         {/* CTA Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -189,6 +185,11 @@ export default function AIFeatures() {
             <RainbowButton className='bg-[#B11AFF] rounded-full'> Contact Sales </RainbowButton>
           </div>
         </motion.div>
+
+        {/* FAQ Section */}
+        <div className="mb-16 mt-24">
+          <FAQSection faqs={faqs} />
+        </div>
       </div>
     </div>
     </>
