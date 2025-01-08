@@ -24,7 +24,7 @@ export function StatsSection({ stats }: StatsProps) {
       initial={{ opacity: 0 }}
       animate={inView ? { opacity: 1 } : { opacity: 0 }}
       transition={{ duration: 0.5 }}
-      className="grid grid-cols-2 md:grid-cols-4 gap-8 p-8 bg-[#1f2937] rounded-xl"
+      className="grid grid-cols-2 md:grid-cols-4 gap-8 p-8  backdrop-blur-sm  border-2 border-neutral-700 rounded-xl w-full"
     >
       {stats.map((stat, index) => (
         <motion.div
@@ -38,7 +38,7 @@ export function StatsSection({ stats }: StatsProps) {
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ delay: index * 0.2 + 0.2 }}
-            className="text-4xl font-bold text-primary mb-2"
+            className="text-4xl font-bold bg-gradient-to-r from-[#B11AFF] to-[#FF689F] text-transparent bg-clip-text mb-2"
           >
             {stat.value}
           </motion.div>
@@ -46,7 +46,7 @@ export function StatsSection({ stats }: StatsProps) {
             initial={{ opacity: 0 }}
             animate={inView ? { opacity: 1 } : { opacity: 0 }}
             transition={{ delay: index * 0.2 + 0.4 }}
-            className="text-sm text-muted-foreground"
+            className="text-sm text-white"
           >
             {stat.label}
           </motion.div>

@@ -1,6 +1,8 @@
+
 'use client'
 
 import { motion } from "framer-motion"
+
 
 interface GradientCircleProps {
   size: number
@@ -16,6 +18,7 @@ export function GradientCircle({ size, color1, color2 }: GradientCircleProps) {
         width: size,
         height: size,
         background: `linear-gradient(45deg, ${color1}, ${color2})`,
+       
       }}
       initial={{ opacity: 0, scale: 0 }}
       animate={{ opacity: 1, scale: 1 }}

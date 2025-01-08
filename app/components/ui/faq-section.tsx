@@ -33,14 +33,14 @@ export function FAQSection({ faqs }: FAQSectionProps) {
         >
           <button
             onClick={() => toggleQuestion(index)}
-            className="flex justify-between items-center w-full text-left p-4 bg-gray-800 hover:bg-gray-700 rounded-lg transition-colors duration-200"
+            className="flex justify-between items-center w-full text-left p-4 bg-transparent backdrop-blur-sm border border-white rounded-lg transition-colors duration-200"
           >
-            <span className="font-semibold text-gray-100">{faq.question}</span>
+            <span className=" text-sm text-white">{faq.question}</span>
             <motion.div
               animate={{ rotate: expandedIndex === index ? 180 : 0 }}
               transition={{ duration: 0.3 }}
             >
-              <ChevronDown className="w-5 h-5 text-gray-400" />
+              <ChevronDown className="w-5 h-5 text-white" />
             </motion.div>
           </button>
           <AnimatePresence>
@@ -52,7 +52,7 @@ export function FAQSection({ faqs }: FAQSectionProps) {
                 transition={{ duration: 0.3 }}
                 className="overflow-hidden"
               >
-                <p className="p-4 bg-gray-800 rounded-b-lg text-gray-300">{faq.answer}</p>
+                <p className="p-4 text-sm backdrop-blur-sm border border-white rounded-lg text-gray-300">{faq.answer}</p>
               </motion.div>
             )}
           </AnimatePresence>

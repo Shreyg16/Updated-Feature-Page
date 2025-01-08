@@ -47,7 +47,7 @@ export function PricingSection() {
  
   return (
     <div className="py-16">
-      <h2 className="text-3xl font-bold mb-8 text-center text-gray-100">Pricing Plans</h2>
+      <h2 className="text-4xl font-bold mb-8 text-center text-white">Pricing <span className="bg-gradient-to-r from-[#B11AFF] to-[#FF689F] text-transparent bg-clip-text">  Plans</span></h2>
       <div className="grid md:grid-cols-3 gap-8">
         {pricingPlans.map((plan, index) => (
           <motion.div
@@ -55,13 +55,13 @@ export function PricingSection() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="bg-gray-800 p-6 rounded-lg flex flex-col"
+            className="bg-neutral-800 p-6 rounded-lg flex flex-col"
           >
-            <h3 className="text-xl font-semibold mb-2 text-gray-100">{plan.name}</h3>
+            <h3 className="text-xl font-semibold mb-2 text-white">{plan.name}</h3>
             <p className="text-3xl font-bold mb-4 bg-gradient-to-r from-[#B11AFF] to-[#FF689F] text-transparent bg-clip-text">{plan.price}</p>
             <ul className="mb-6 flex-grow">
               {plan.features.map((feature, featureIndex) => (
-                <li key={featureIndex} className="flex items-center mb-2 text-gray-300">
+                <li key={featureIndex} className="flex items-center mb-2 text-white">
                   <Check className="w-5 h-5 mr-2 text-[#FF689F]" />
                   {feature}
                 </li>
